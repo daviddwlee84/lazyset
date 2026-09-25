@@ -112,8 +112,9 @@ macOS PTY checks include real btop/htop, lazychezmoi with isolated native paths,
 dev with disposable paths and runtime disabled, and Superfile with disposable
 HOME/XDG paths and update checks/previews disabled. They verify native popup
 cancellation, guarded q, prefix return, mouse Quit and terminal restoration.
-Linux is cross-built only so far; no real SSH host has been verified. Do not
-represent these as Linux-runtime or remote-host compatibility evidence.
+Linux now has native Go/race and isolated fixture PTY CI. Real-child acceptance
+above remains macOS-specific; no real SSH host has been verified. Do not present
+fixture success as complete backend or remote-host compatibility evidence.
 
 ## Binary distribution
 

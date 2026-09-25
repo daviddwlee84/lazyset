@@ -249,6 +249,6 @@ python3 scripts/pty_smoke.py bin/lazyset --real-monitors --real-lazychezmoi --re
 
 測試涵蓋設定合併／保留註解／並行修改、CLI 的 JSON 與 TTY 意圖、discovery／SSH 命令、session lifecycle 與輸入路由。PTY smoke 使用隔離設定，驗證 prefix、q、paste、mouse、resize、editor handoff 與退出後 terminal restoration；`--real-monitors` 另外測試已安裝的 btop／htop，`--real-lazychezmoi`、`--real-dev` 與 `--real-superfile` 使用隔離設定檢查原生對話框按鍵。
 
-目前已在 macOS 真實 PTY 驗證 btop／htop／lazychezmoi／dev／Superfile。lazychezmoi 使用隔離的來源、目的目錄與設定；dev 使用暫存路徑並停用 runtime handoff；Superfile 使用暫存 HOME／XDG 目錄並停用更新檢查與預覽。已確認 dev 與 Superfile 的 Esc 關閉 Help、lazychezmoi 的 Ctrl+C 取消 Actions 後仍在 Interact，q 與 prefix → Esc 返回 Observe 並保留 PID，以及滑鼠 Quit 的取消、確認與終端還原。Superfile 也驗證原生退出後保留退出畫面、明確 Reopen 才重開。Linux 完成交叉編譯，尚未在 Linux terminal 或真實 SSH host 驗證。模擬 SSH 測試不能取代實際主機上的認證、環境與終端相容性檢查。
+目前已在 macOS 真實 PTY 驗證 btop／htop／lazychezmoi／dev／Superfile。lazychezmoi 使用隔離的來源、目的目錄與設定；dev 使用暫存路徑並停用 runtime handoff；Superfile 使用暫存 HOME／XDG 目錄並停用更新檢查與預覽。已確認 dev 與 Superfile 的 Esc 關閉 Help、lazychezmoi 的 Ctrl+C 取消 Actions 後仍在 Interact，q 與 prefix → Esc 返回 Observe 並保留 PID，以及滑鼠 Quit 的取消、確認與終端還原。Superfile 也驗證原生退出後保留退出畫面、明確 Reopen 才重開。Linux 現已通過 GitHub-hosted 原生 Go／race 與隔離 fixture PTY 檢查；上述真實子工具互動驗收仍以 macOS 為範圍，真實 SSH host 尚未驗證。模擬 SSH 測試不能取代實際主機上的認證、環境與終端相容性檢查。
 
 目前提供 macOS／Linux binary release 與 personal Homebrew formula；`upgrade --check` 檢查擁有權，`upgrade --yes` 交給已驗證的 Homebrew。Standalone binary 使用原安裝來源（chezmoi：`just upgrade-personal`）；checkout 仍可更新後重新 build。`version` 預設顯示 `dev`，可用 `go build -ldflags '-X main.version=YOUR_VERSION' -o ./bin/lazyset ./cmd/lazyset` 指定建置版本。
