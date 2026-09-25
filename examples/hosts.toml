@@ -1,0 +1,11 @@
+# Machine-specific hosts can be excluded from dotfile synchronization while
+# config.toml is shared. OpenSSH owns options, keys, ProxyJump and host-key trust.
+default_host = "local"
+
+# Defining a host never connects to it. The Hosts picker also supports n (or
+# :host-add); Ctrl+S saves here without probing or connecting.
+[[hosts]]
+id = "gpu-box"
+name = "GPU server"
+ssh = "gpu-box"
+# env = { PATH = "/home/me/.local/bin:/home/me/go/bin:/usr/local/bin:/usr/bin:/bin" }

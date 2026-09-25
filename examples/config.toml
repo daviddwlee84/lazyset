@@ -1,0 +1,57 @@
+# All fields are optional. Missing tools stay listed; they are not installed.
+prefix = 'ctrl+\'
+mouse = true
+# The first click enters Interact and reaches the child. Use "focus-only" to
+# consume that initial click instead.
+focus_click = "forward"
+# "all" is Explore: every built-in and custom tool. "personal" contains the
+# independently installed personal TUIs (including dev-cli as `dev tui`).
+default_set = "all"
+
+# Machine-specific targets and default_host live in sibling hosts.toml.
+# Use --hosts-config FILE to select another file; config edit --hosts edits it.
+# --set only chooses the view; --start-set my-workbench starts available embedded
+# members once. Explicit IDs can follow --, for example: lazyset -- btop dev
+
+# Override a built-in tool without repeating its metadata.
+[[tools]]
+id = "btop"
+return_keys = ["q"]
+
+# Built-in lazychezmoi protects q and Ctrl+C. Return keys are not context-aware:
+# prefix, v, then the key passes one key through (prefix q is the shorter q form).
+# Set [] to keep every child key; the host prefix still returns to Observe.
+# [[tools]]
+# id = "lazychezmoi"
+# return_keys = []
+
+# Yazi defaults to the selected host's HOME (`dir = "~"`). Uncomment to change it.
+# [[tools]]
+# id = "yazi"
+# dir = "~/Downloads"
+
+# lazygit keeps the local invocation directory. Specify a repository for SSH
+# hosts or a fixed project; ~ and ~/path use the selected host's HOME.
+# [[tools]]
+# id = "lazygit"
+# dir = "~/src/my-project"
+
+# Custom tools default to return_keys = []. Command arguments are literal,
+# with no shell expansion. External mode returns after the editor exits.
+[[tools]]
+id = "editor"
+name = "Neovim"
+description = "Edit files with my regular Neovim configuration"
+category = "Files / Git"
+command = ["nvim"]
+mode = "external"
+return_keys = []
+# dir = "~/src/my-project"
+# env = { NVIM_APPNAME = "minimal" }
+
+# Built-in sets are read-only. Pick a new id for a custom copy.
+# Copying All keeps a snapshot; only the built-in All automatically gains tools.
+[[sets]]
+id = "my-workbench"
+name = "My workbench"
+tools = ["btop", "nvtop", "lazygit", "dev", "editor"]
