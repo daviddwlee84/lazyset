@@ -6,7 +6,7 @@ import (
 	"strings"
 
 	tea "charm.land/bubbletea/v2"
-	"lazyset/internal/core"
+	"github.com/daviddwlee84/lazyset/internal/core"
 )
 
 const startupConcurrency = 3

@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"fmt"
 
+	"github.com/daviddwlee84/lazyset/internal/core"
 	"github.com/pelletier/go-toml/v2"
-	"lazyset/internal/core"
 )
 
 // sourceWriteValidator validates the merged candidate and rejects changes to

@@ -1,4 +1,4 @@
-module lazyset
+module github.com/daviddwlee84/lazyset
 
 go 1.26.5
 

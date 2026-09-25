@@ -6,8 +6,8 @@ import (
 
 	"charm.land/bubbles/v2/textinput"
 	tea "charm.land/bubbletea/v2"
-	"lazyset/internal/config"
-	"lazyset/internal/core"
+	"github.com/daviddwlee84/lazyset/internal/config"
+	"github.com/daviddwlee84/lazyset/internal/core"
 )
 
 type hostDraftMsg struct {

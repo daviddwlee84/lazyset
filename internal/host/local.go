@@ -12,7 +12,7 @@ import (
 	"strings"
 	"time"
 
-	"lazyset/internal/core"
+	"github.com/daviddwlee84/lazyset/internal/core"
 )
 
 func discoverLocal(ctx context.Context, h core.Host, tools []core.Tool) ([]core.Availability, error) {

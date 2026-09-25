@@ -13,11 +13,11 @@ import (
 	"strings"
 	"testing"
 
-	"lazyset/internal/catalog"
-	"lazyset/internal/config"
-	"lazyset/internal/core"
-	"lazyset/internal/host"
-	"lazyset/internal/tui"
+	"github.com/daviddwlee84/lazyset/internal/catalog"
+	"github.com/daviddwlee84/lazyset/internal/config"
+	"github.com/daviddwlee84/lazyset/internal/core"
+	"github.com/daviddwlee84/lazyset/internal/host"
+	"github.com/daviddwlee84/lazyset/internal/tui"
 )
 
 type fakeDiscovery struct {

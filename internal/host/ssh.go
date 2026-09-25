@@ -15,7 +15,7 @@ import (
 	"strings"
 	"time"
 
-	"lazyset/internal/core"
+	"github.com/daviddwlee84/lazyset/internal/core"
 )
 
 type sshPolicy struct {

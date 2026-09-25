@@ -9,8 +9,8 @@ import (
 	"strings"
 	"testing"
 
-	"lazyset/internal/config"
-	"lazyset/internal/core"
+	"github.com/daviddwlee84/lazyset/internal/config"
+	"github.com/daviddwlee84/lazyset/internal/core"
 )
 
 func TestStartupIDsAndSetsAreResolvedWithoutDiscovery(t *testing.T) {

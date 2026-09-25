@@ -8,7 +8,7 @@ import (
 	"time"
 
 	tea "charm.land/bubbletea/v2"
-	"lazyset/internal/core"
+	"github.com/daviddwlee84/lazyset/internal/core"
 )
 
 func markInputTestExited(m *Model, term *fakeTerminal, code int) {

@@ -8,8 +8,8 @@ import (
 	"testing"
 
 	tea "charm.land/bubbletea/v2"
-	"lazyset/internal/config"
-	"lazyset/internal/core"
+	"github.com/daviddwlee84/lazyset/internal/config"
+	"github.com/daviddwlee84/lazyset/internal/core"
 )
 
 type hostFormService struct {

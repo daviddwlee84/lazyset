@@ -8,7 +8,7 @@ import (
 	"strings"
 	"testing"
 
-	"lazyset/internal/core"
+	"github.com/daviddwlee84/lazyset/internal/core"
 )
 
 func writeHosts(t *testing.T, sources Sources, text string) {

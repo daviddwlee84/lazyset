@@ -6,8 +6,8 @@ import (
 	"os"
 	"path/filepath"
 
+	"github.com/daviddwlee84/lazyset/internal/core"
 	"github.com/pelletier/go-toml/v2"
-	"lazyset/internal/core"
 )
 
 // Sources keeps portable preferences separate from this machine's SSH hosts.

@@ -8,8 +8,8 @@ import (
 	"strings"
 	"testing"
 
-	"lazyset/internal/catalog"
-	"lazyset/internal/core"
+	"github.com/daviddwlee84/lazyset/internal/catalog"
+	"github.com/daviddwlee84/lazyset/internal/core"
 )
 
 func writeConfig(t *testing.T, data string) string {

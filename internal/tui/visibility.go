@@ -3,7 +3,7 @@ package tui
 import (
 	"strings"
 
-	"lazyset/internal/core"
+	"github.com/daviddwlee84/lazyset/internal/core"
 )
 
 type visibilityFilter struct{ Running, Available, Missing, Other bool }

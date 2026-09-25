@@ -4,9 +4,9 @@ import (
 	"bytes"
 	"fmt"
 
+	"github.com/daviddwlee84/lazyset/internal/core"
 	"github.com/pelletier/go-toml/v2"
 	"github.com/pelletier/go-toml/v2/unstable"
-	"lazyset/internal/core"
 )
 
 // SaveHostIfUnchanged adds a new SSH host without rewriting existing TOML or

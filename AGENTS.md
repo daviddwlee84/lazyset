@@ -18,8 +18,9 @@ is lazyset; it is not limited to monitoring and does not implement its own metri
 - Checks: `go test ./...`, `go test -race ./...`, `go vet ./...`.
 - PTY checks after building: `python3 scripts/pty_smoke.py bin/lazyset --real-monitors --real-lazychezmoi --real-dev --real-superfile`.
 - Example configuration: `go run ./cmd/lazyset --config ./examples/config.toml config validate`.
-- There is no published installation/upgrade channel yet. Source builds report
-  `dev` unless `-ldflags '-X main.version=VERSION'` is supplied.
+- macOS/Linux binaries and the personal tap are supported; see docs/distribution.md.
+  `upgrade --check` is read-only; apply delegates verified Homebrew ownership.
+  Plain source builds report `dev`; tagged Go installs recover their module version.
 
 ## Architecture and contracts
 
@@ -113,3 +114,9 @@ HOME/XDG paths and update checks/previews disabled. They verify native popup
 cancellation, guarded q, prefix return, mouse Quit and terminal restoration.
 Linux is cross-built only so far; no real SSH host has been verified. Do not
 represent these as Linux-runtime or remote-host compatibility evidence.
+
+## Binary distribution
+
+See `docs/distribution.md`. Run GoReleaser config/snapshot checks and
+`scripts/check-distribution.py` before tagging. Preserve immutable releases and
+source/module exclusions. Backend setup is separate from installing this CLI.

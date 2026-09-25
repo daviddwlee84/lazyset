@@ -7,8 +7,8 @@ import (
 	"unicode"
 
 	tea "charm.land/bubbletea/v2"
-	"lazyset/internal/config"
-	"lazyset/internal/core"
+	"github.com/daviddwlee84/lazyset/internal/config"
+	"github.com/daviddwlee84/lazyset/internal/core"
 )
 
 type action struct{ ID, Label, Key string }

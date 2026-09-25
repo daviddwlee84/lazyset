@@ -5,7 +5,7 @@ import (
 	"sync"
 
 	tea "charm.land/bubbletea/v2"
-	"lazyset/internal/session"
+	"github.com/daviddwlee84/lazyset/internal/session"
 )
 
 type terminal interface {

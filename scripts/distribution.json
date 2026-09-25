@@ -1,0 +1,14 @@
+{
+  "main": "./cmd/lazyset",
+  "version_symbol": "main.version",
+  "required": [
+    "cmd/lazyset/main.go"
+  ],
+  "smoke": [
+    [
+      "upgrade",
+      "--check",
+      "--json"
+    ]
+  ]
+}

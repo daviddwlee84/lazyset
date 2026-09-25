@@ -11,8 +11,8 @@ import (
 
 	tea "charm.land/bubbletea/v2"
 	"github.com/charmbracelet/x/ansi"
-	"lazyset/internal/core"
-	"lazyset/internal/session"
+	"github.com/daviddwlee84/lazyset/internal/core"
+	"github.com/daviddwlee84/lazyset/internal/session"
 )
 
 type fakeTerminal struct {

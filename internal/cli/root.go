@@ -6,6 +6,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"github.com/daviddwlee84/lazyset/internal/managedupgrade"
 	"io"
 	"os"
 	"os/exec"
@@ -16,11 +17,11 @@ import (
 
 	"github.com/charmbracelet/x/ansi"
 	"github.com/charmbracelet/x/term"
+	"github.com/daviddwlee84/lazyset/internal/config"
+	"github.com/daviddwlee84/lazyset/internal/core"
+	"github.com/daviddwlee84/lazyset/internal/host"
+	"github.com/daviddwlee84/lazyset/internal/tui"
 	"github.com/spf13/cobra"
-	"lazyset/internal/config"
-	"lazyset/internal/core"
-	"lazyset/internal/host"
-	"lazyset/internal/tui"
 )
 
 type DiscoveryManager interface {
@@ -189,6 +190,7 @@ func NewRoot(version string, deps Dependencies) *cobra.Command {
 		writeWarnings(cmd.ErrOrStderr(), opts.Warnings)
 		return deps.RunTUI(cfg, sources.MainPath, opts)
 	}
+	root.AddCommand(managedupgrade.NewCommand(managedupgrade.Product{Binary: "lazyset", Module: "github.com/daviddwlee84/lazyset", Main: "github.com/daviddwlee84/lazyset/cmd/lazyset"}))
 	root.AddCommand(toolsCommand(deps, &configPath, &hostsPath), setsCommand(&configPath, &hostsPath), configCommand(deps, &configPath, &hostsPath))
 	root.AddCommand(&cobra.Command{Use: "version", Short: "Print the build version", Args: noArgs, RunE: func(cmd *cobra.Command, _ []string) error {
 		_, err := fmt.Fprintln(cmd.OutOrStdout(), "lazyset "+version)

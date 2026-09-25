@@ -9,9 +9,9 @@ import (
 	"path/filepath"
 	"time"
 
-	"lazyset/internal/catalog"
-	"lazyset/internal/config"
-	"lazyset/internal/core"
+	"github.com/daviddwlee84/lazyset/internal/catalog"
+	"github.com/daviddwlee84/lazyset/internal/config"
+	"github.com/daviddwlee84/lazyset/internal/core"
 )
 
 type history struct {

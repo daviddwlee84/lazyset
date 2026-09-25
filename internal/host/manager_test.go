@@ -12,7 +12,7 @@ import (
 	"testing"
 	"time"
 
-	"lazyset/internal/core"
+	"github.com/daviddwlee84/lazyset/internal/core"
 )
 
 func writeExecutable(t *testing.T, dir, name, body string) string {

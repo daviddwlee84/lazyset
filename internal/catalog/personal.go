@@ -1,6 +1,6 @@
 package catalog
 
-import "lazyset/internal/core"
+import "github.com/daviddwlee84/lazyset/internal/core"
 
 // personalTools contains the independently installed personal CLI suite. Each
 // command opens its existing TUI; discovering it does not configure its backend.

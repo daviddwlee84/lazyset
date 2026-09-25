@@ -14,8 +14,8 @@ import (
 	"sync"
 	"time"
 
-	"lazyset/internal/core"
-	"lazyset/internal/session"
+	"github.com/daviddwlee84/lazyset/internal/core"
+	"github.com/daviddwlee84/lazyset/internal/session"
 )
 
 const (

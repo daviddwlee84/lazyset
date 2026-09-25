@@ -12,9 +12,9 @@ import (
 	"strings"
 	"unicode"
 
+	"github.com/daviddwlee84/lazyset/internal/catalog"
+	"github.com/daviddwlee84/lazyset/internal/core"
 	"github.com/pelletier/go-toml/v2"
-	"lazyset/internal/catalog"
-	"lazyset/internal/core"
 )
 
 // Defaults always returns independently owned slices and maps.

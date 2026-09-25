@@ -7,7 +7,7 @@ import (
 
 	tea "charm.land/bubbletea/v2"
 	"github.com/charmbracelet/x/ansi"
-	"lazyset/internal/catalog"
+	"github.com/daviddwlee84/lazyset/internal/catalog"
 )
 
 func TestReturnHintRemainsVisibleAcrossWidthsAndToolPolicies(t *testing.T) {

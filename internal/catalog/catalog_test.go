@@ -3,8 +3,8 @@ package catalog_test
 import (
 	"testing"
 
-	"lazyset/internal/catalog"
-	"lazyset/internal/config"
+	"github.com/daviddwlee84/lazyset/internal/catalog"
+	"github.com/daviddwlee84/lazyset/internal/config"
 )
 
 func TestCatalogIsCompleteAndReferencesExistingTools(t *testing.T) {

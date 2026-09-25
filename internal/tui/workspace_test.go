@@ -5,8 +5,8 @@ import (
 	"testing"
 
 	tea "charm.land/bubbletea/v2"
-	"lazyset/internal/core"
-	"lazyset/internal/session"
+	"github.com/daviddwlee84/lazyset/internal/core"
+	"github.com/daviddwlee84/lazyset/internal/session"
 )
 
 func addAllSet(m *Model) {

@@ -9,10 +9,10 @@ import (
 	"sort"
 	"strings"
 
+	"github.com/daviddwlee84/lazyset/internal/catalog"
+	"github.com/daviddwlee84/lazyset/internal/core"
 	"github.com/pelletier/go-toml/v2"
 	"github.com/pelletier/go-toml/v2/unstable"
-	"lazyset/internal/catalog"
-	"lazyset/internal/core"
 )
 
 // ErrChanged means the file changed after the UI began editing. Reload it before
