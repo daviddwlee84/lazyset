@@ -196,7 +196,7 @@ func NewRoot(version string, deps Dependencies) *cobra.Command {
 		_, err := fmt.Fprintln(cmd.OutOrStdout(), "lazyset "+version)
 		return err
 	}})
-	root.CompletionOptions.DisableDefaultCmd = true
+	root.CompletionOptions.DisableDefaultCmd = false
 	return root
 }
 
